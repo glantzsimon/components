@@ -1,0 +1,10 @@
+Git bash commands
+---------------------
+
+gpg --iist-packets [file].asc
+
+git-crypt init
+
+git-crypt add-gpg-user --trusted key-id
+
+git-crypt unlock
