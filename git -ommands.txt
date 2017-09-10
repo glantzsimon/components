@@ -8,3 +8,5 @@ git-crypt init
 git-crypt add-gpg-user --trusted key-id
 
 git-crypt unlock
+
+ssh-keygen -t rsa -b 4096 -C "simon.glantz@mac.com
