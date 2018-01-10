@@ -1,0 +1,5 @@
+	
+Using Build transform with Jenkins, I also see that web.config does not transform , however, the actual transformation takes place when you do the deploy. I use an all in one msbuild command to do the build and deploy together.
+
+
+MSBuild MyProj.csproj /P:Configuration=Release /P:DeployOnBuild=True /P:DeployTarget=MsDeployPublish /P:MsDeployServiceUrl=https://your server/msdeploy.axd /P:AllowUntrustedCertificate=True /P:MSDeployPublishMethod=WMSvc /P:CreatePackageOnPublish=True /P:UserName=username /P:Password=password1 /P:DeployIISAppPath="Default Web Site or name of your website"

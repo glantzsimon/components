@@ -1,12 +1,45 @@
 Git bash commands
 ---------------------
 
-gpg --iist-packets [file].asc
+------------------------------------
+GIT REINITIALISE GITIGNORE
+------------------------------------
+git rm -r --cached . 
+git add .
+git commit -am "Remove ignored files"
 
+
+------------------------------------
+GIT-CRYPT
+------------------------------------
 git-crypt init
 
 git-crypt add-gpg-user --trusted key-id
 
 git-crypt unlock
 
+
+------------------------------------
+SSH
+------------------------------------
 ssh-keygen -t rsa -b 4096 -C "simon.glantz@mac.com
+
+
+------------------------------------
+OPENSSL
+------------------------------------
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365
+
+
+------------------------------------
+GPG
+------------------------------------
+gpg --import key.asc
+
+gpg --gen-key
+
+gpg --export -a "User Name" > public.key
+
+gpg --import public.key
+
+gpg --iist-packets [file].asc
